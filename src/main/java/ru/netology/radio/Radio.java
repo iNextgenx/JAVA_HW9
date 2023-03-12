@@ -4,27 +4,43 @@ public class Radio {
 
     private int volume;
     private int station;
+    private int stationsNumber = 10;
+
+    public Radio(int stationsNumber) { // Конструктор с параметром кол-ва станций
+        this.stationsNumber = stationsNumber;
+    }
+
+    public Radio() {     // Конструктор без параметра кол-ва станций
+
+    }
+
+    public int getStationsNumber() {  // Геттер кол-ва станций
+
+        return stationsNumber;
+    }
 
     public int getStation() {    // Геттер текущего номера станции
+
         return station;
     }
 
     public int getVolume() {    // Геттер текущего значения громкости
+
         return volume;
     }
 
-    public void setStation(int newStation) {  //  Сеттер номера станции (от 0 до 9)
+    public void setStation(int newStation) {  //  Сеттер номера станции (от 0 до Max)
         if (newStation < 0) {
             return;
         }
-        if (newStation > 9) {
+        if (newStation > (stationsNumber - 1)) {
             return;
         }
         station = newStation;
     }
 
     public void next() {   //  Следующая станция
-        if (station == 9) {
+        if (station == (stationsNumber - 1)) {
             station = 0;
             return;
         }
@@ -33,7 +49,7 @@ public class Radio {
 
     public void prev() {  //  Предыдущая станция
         if (station == 0) {
-            station = 9;
+            station = stationsNumber - 1;
             return;
         }
         station = station - 1;
