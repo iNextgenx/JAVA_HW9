@@ -2,8 +2,8 @@ package ru.netology.radio;
 
 public class Radio {
 
-    public int volume;
-    public int station;
+    private int volume;
+    private int station;
 
     public int getStation() {    // Геттер текущего номера станции
         return station;
