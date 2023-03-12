@@ -9,7 +9,7 @@ public class Radio {
         return station;
     }
 
-    public int getVolume() {    // Геттер текущего номера станции
+    public int getVolume() {    // Геттер текущего значения громкости
         return volume;
     }
 

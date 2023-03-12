@@ -30,7 +30,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldTestVolSetUp100() {  // Проверка при значении больше 100
+    public void shouldTestVolSetAbove100() {  // Проверка при значении больше 100
         Radio volume = new Radio();
 
         volume.setVolume(125);
@@ -104,7 +104,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldTestPrevСorrectValue() { // Проверка при установленной станции от 1 до 9
+    public void shouldTestPrevFrom1to9() { // Проверка при установленной станции от 1 до 9
         Radio station = new Radio();
 
         station.setStation(7);
@@ -117,7 +117,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldTestPrev() { // Проверка при установленной станции 0
+    public void shouldTestPrevIfStation0() { // Проверка при установленной станции 0
         Radio station = new Radio();
 
         station.setStation(0);
